@@ -1,5 +1,4 @@
 # Hospital-Management-System
-# Hospital Management System
 
 This is a simple Hospital Management System implemented using Python and Tkinter. The system allows for user registration, login, and management of doctors and appointments. There are different roles for users (patients and admins), each with their own set of functionalities.
 
