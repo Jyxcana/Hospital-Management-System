@@ -1,86 +1,100 @@
-# Hospital-Management-System
+# Hospital Management System
 
-This is a simple Hospital Management System implemented using Python and Tkinter. The system allows for user registration, login, and management of doctors and appointments. There are different roles for users (patients and admins), each with their own set of functionalities.
+This is a simple hospital management system implemented using Python and Tkinter. The system allows users to sign up as patients or admins, log in, and perform various tasks such as booking appointments, viewing medical records, and managing doctors. The data is stored in a JSON file (`hospital_data.txt`).
 
 ## Features
 
-- **User Registration**: Patients and admins can sign up for an account.
-- **User Login**: Patients and admins can log in to access their respective menus.
+- **User Types**: Patients and Admins.
+- **Sign Up**: Separate sign-up processes for patients and admins.
+- **Log In**: Users can log in using their username and password.
 - **Admin Functions**:
   - Add, update, and remove doctors.
   - View all appointments.
   - View patient records.
+  - View all doctors.
 - **Patient Functions**:
-  - View doctors.
-  - Book appointments.
-  - View their own appointments.
-  - View their own medical records.
+  - View available doctors.
+  - Book appointments with doctors.
+  - View own appointments.
+  - View own medical records.
 
-## Prerequisites
+## Installation and Setup
 
-- Python 3.x
-- Tkinter (usually comes pre-installed with Python)
+1. **Clone the repository**:
+    ```bash
+    git clone <repository_url>
+    cd <repository_directory>
+    ```
 
-## Installation
+2. **Install Dependencies**:
+    Ensure you have Python and Tkinter installed. Tkinter usually comes pre-installed with Python.
 
-1. Clone the repository or download the source code.
-2. Ensure Python is installed on your system.
-3. Run the `hospital_management_system.py` file.
-
-```sh
-python hospital_management_system.py
-```
+3. **Run the Application**:
+    ```bash
+    python hospital_management_system.py
+    ```
 
 ## Usage
 
-1. **Launch the Application**: Run the script to start the application.
-2. **Main Menu**: You will be presented with options to sign up as a patient, sign up as an admin, log in, or exit.
-3. **Sign Up**: Choose to sign up as either a patient or an admin. Admin sign-up requires a secret key (`jyx666`).
-4. **Log In**: Log in with your username and password.
-5. **Admin Menu**: After logging in as an admin, you can add, update, or remove doctors, view all appointments, and view patient records.
-6. **Patient Menu**: After logging in as a patient, you can view doctors, book appointments, view your appointments, and view your medical records.
+### Main Menu
 
-## File Structure
+Upon starting the application, you will see the main menu with the following options:
 
-- `hospital_management_system.py`: The main script file containing all the functionalities.
-- `hospital_data.txt`: A JSON file used for storing user data, doctor information, and appointments.
+1. **Sign Up as Patient**: Register as a patient.
+2. **Sign Up as Admin**: Register as an admin (requires a secret key).
+3. **Log In**: Log in to the system.
+4. **Exit**: Exit the application.
 
-## Code Overview
+### Sign Up
 
-- **Data Loading and Saving**:
-  - `load_data()`: Loads data from the `hospital_data.txt` file.
-  - `save_data(data)`: Saves data to the `hospital_data.txt` file.
+- **Patient Sign Up**:
+  - Enter your name (only letters, no spaces).
+  - Choose a username (no spaces).
+  - Set a password.
+  - Provide your email and phone number.
+  - Enter your medical history.
 
-- **User Management**:
-  - `sign_up(as_admin=False)`: Sign-up function for patients and admins.
-  - `log_in()`: Log-in function for patients and admins.
-  - `find_user(data, username)`: Finds a user by their username.
+- **Admin Sign Up**:
+  - Enter the admin secret key (`jyx666`).
+  - Enter your name (only letters, no spaces).
+  - Choose a username (no spaces).
+  - Set a password.
 
-- **Admin Functions**:
-  - `admin_menu()`: Displays the admin menu.
-  - `add_doctor()`: Adds a new doctor.
-  - `update_doctor()`: Updates an existing doctor's information.
-  - `remove_doctor()`: Removes a doctor.
-  - `view_appointments()`: Views all appointments.
-  - `view_patient_records()`: Views patient records.
+### Log In
 
-- **Patient Functions**:
-  - `patient_menu(user)`: Displays the patient menu.
-  - `view_doctors()`: Views all doctors.
-  - `book_appointment(user)`: Books an appointment for a patient.
-  - `view_my_appointments(user)`: Views the patient's own appointments.
-  - `view_my_records(user)`: Views the patient's own medical records.
+- Enter your username and password to log in.
+- If the credentials are correct, you will be directed to either the admin or patient menu based on your account type.
 
-- **Main Menu**:
-  - `main_menu()`: Displays the initial main menu with options to sign up, log in, or exit.
+### Admin Menu
 
-- **Entry Point**:
-  - The script starts by hiding the root Tkinter window and displaying the main menu.
+Admins have the following options:
 
-## Contributing
+1. **Add Doctor**: Add a new doctor by providing their name, specialty, and available slots.
+2. **Update Doctor**: Update the information of an existing doctor.
+3. **Remove Doctor**: Remove a doctor using their ID.
+4. **View Appointments**: View all appointments.
+5. **View Patient Records**: View medical records of a specific patient.
+6. **View All Doctors**: View all registered doctors.
+7. **Log Out**: Log out from the admin account.
 
-Contributions are welcome! Please fork the repository and submit a pull request.
+### Patient Menu
+
+Patients have the following options:
+
+1. **View Doctors**: View all available doctors.
+2. **Book Appointment**: Book an appointment with a doctor by providing the doctor's ID, desired date, and time.
+3. **View Appointments**: View all your appointments.
+4. **View Medical Records**: View your medical records.
+5. **Log Out**: Log out from the patient account.
+
+## Data Storage
+
+All data is stored in a JSON file named `hospital_data.txt` located in the same directory as the script. The data includes user information, doctor information, and appointments.
 
 ## License
 
 This project is licensed under the MIT License.
+
+## Contact
+
+For any questions or issues, please contact [your_email@example.com].
