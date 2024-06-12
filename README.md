@@ -97,4 +97,4 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For any questions or issues, please contact [your_email@example.com].
+For any questions or issues, please contact jyxcana@gmail.com.
