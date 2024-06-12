@@ -22,8 +22,8 @@ This is a simple hospital management system implemented using Python and Tkinter
 
 1. **Clone the repository**:
     ```bash
-    git clone [<[repository_url](https://github.com/Jyxcana/Hospital-Management-System.git)>]
-    cd <[repository_directory](https://github.com/Jyxcana/Hospital-Management-System.git)>
+    git clone https://github.com/Jyxcana/Hospital-Management-System.git
+    cd <repository_directory>
     ```
 
 2. **Install Dependencies**:
