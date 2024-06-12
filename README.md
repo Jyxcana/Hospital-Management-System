@@ -31,7 +31,7 @@ This is a simple hospital management system implemented using Python and Tkinter
 
 3. **Run the Application**:
     ```bash
-    python hospital_management_system.py
+    python main.py
     ```
 
 ## Usage
